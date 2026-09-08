@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Fusion</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    #gameContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    canvas {
+      border: 2px solid #333;
+      border-radius: 4px;
+      display: block;
+    }
+
+    #controls {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      max-width: 500px;
+    }
+
+    #controls kbd {
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-family: monospace;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    @media (max-width: 700px) {
+      canvas {
+        width: 90vw;
+        height: auto;
+      }
+      h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <h1>Falling Fusion</h1>
+    <canvas id="gameCanvas" role="img" aria-label="Falling Fusion game board"></canvas>
+    <div id="controls">
+      <p>
+        <kbd>←</kbd> <kbd>→</kbd> Move &nbsp;
+        <kbd>↓</kbd> Soft Drop &nbsp;
+        <kbd>↑</kbd>/<kbd>X</kbd> Rotate CW &nbsp;
+        <kbd>Z</kbd> Rotate CCW &nbsp;
+        <kbd>Space</kbd> Hard Drop &nbsp;
+        <kbd>P</kbd> Pause &nbsp;
+        <kbd>R</kbd> Restart
+      </p>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
