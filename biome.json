@@ -1,0 +1,27 @@
+{
+  "include": "**/*.ts",
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedParameters": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "warning"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "files": {
+    "ignore": ["node_modules/**", "dist/**"]
+  }
+}
